@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>...</title>
+    <style>
+        body {
+            background-color: white;
+        }
+
+        span {
+            font-size: 34px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content"></div>
+
+    <script>
+
+        var red = 0;
+        var green = 0;
+        var blue = 0;
+        function intToHex(val) {
+            if (val < 16) {
+                return '0' + val.toString(16);
+            }
+            else if (val > 255) {
+                return intToHex(val % 255);
+            }
+            else if (val < 0) {
+                return '00';
+            }
+            else {
+                return val.toString(16);
+            }
+        }
+
+        function makeHexString(i) {
+            i = i * 2;
+            if (i > (255 * 6) - 1) {
+                i = i % (255 * 6);
+
+                if (i > (255 * 3) - 1) {
+                    i = i % (255 * 3);
+                    if (i > (255 * 2 - 1)) {
+                        green = 255 - (i % 255);
+                    } else if (i > 255) {
+                        red = 255 - (i % 255);
+                    } else {
+                        blue = 255 - i;
+                    }
+                }
+                else {
+                    if (i > (255 * 2 - 1)) {
+                        red = i % 255;
+                    } else if (i > 255) {
+                        blue = i % 255
+                    } else {
+                        green = i;
+                    }
+                }
+            }
+            else if (i > (255 * 3) - 1) {
+                i = i % (255 * 3);
+                if (i > (255 * 2 - 1)) {
+                    blue = 255 - (i % 255);
+                } else if (i > 255) {
+                    green = 255 - (i % 255);
+                } else {
+                    red = 255 - i;
+                }
+            }
+            else {
+                if (i > (255 * 2 - 1)) {
+                    blue = i % 255;
+                } else if (i > 255) {
+                    green = i % 255
+                } else {
+                    red = i;
+                }
+            }
+            return hexColor = "#" + intToHex(red) + intToHex(green) + intToHex(blue);
+        }
+
+        function makeSpan(i) {
+            addElement('<span style="color: ' + makeHexString(i) + '"> BADE</span>');
+        }
+
+        function addElement(element) {
+            setTimeout((i) => {
+                document.getElementById("content").innerHTML += element
+            }, 10 * i)
+        }
+        for (var i = 0; i < 1500; i++) {
+            //mySpan = makeSpan(i);
+            makeSpan(i)
+        }
+    </script>
+</body>
+
+</html>
