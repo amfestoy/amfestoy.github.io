@@ -4,7 +4,7 @@ html, body, h1, h2, h3, h4, p {
 
 html, body { height: 100%; }
 body {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -25,16 +25,14 @@ div.header {
 
 p.info {
     margin: 70px;
-    font-size: 3vw;
-
-
+    font-size: 40px;
 }
 
 body {
     text-align: center;
     background-color: #042863;
     color: #9a9ea5;
-    font-size: 2vw;
+    font-size: 20px;
     background: linear-gradient( #42507e, #042863) fixed;
 }
 
