@@ -95,10 +95,10 @@ img {
 
 @-webkit-keyframes wave {
     0% {
-      margin-left: 0;
+        -webkit-margin-left: 0;
     }
     100% {
-      margin-left: -1600px;
+        -webkit-margin-left: -1600px;
     }
   }
 
