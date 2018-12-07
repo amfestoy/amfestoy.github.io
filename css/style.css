@@ -2,6 +2,11 @@ html, body, h1, h2, h3, h4, p {
     margin: 0;
 }
 
+html, body { height: 100%; }
+body {
+  overflow: hidden;
+}
+
 h1 {
     position: relative;
     font-size: 30px;
@@ -20,7 +25,8 @@ div.header {
 
 p.info {
     margin: 70px;
-    font-size: 25px;
+    font-size: 3vw;
+
 
 }
 
@@ -28,7 +34,7 @@ body {
     text-align: center;
     background-color: #042863;
     color: #9a9ea5;
-    font-size: 15px;
+    font-size: 2vw;
     background: linear-gradient( #42507e, #042863) fixed;
 }
 
@@ -43,11 +49,6 @@ p {
 
 img {
     width: 350px;
-}
-
-html, body { height: 100%; }
-body {
-  overflow: hidden;
 }
 
 .ocean {
