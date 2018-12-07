@@ -93,21 +93,21 @@ img {
 
 }
 
-@-webkit-keyframes wave {
+@keyframes wave {
     0% {
-        -webkit-margin-left: 0;
+      margin-left: 0;
     }
     100% {
-        -webkit-margin-left: -1600px;
+      margin-left: -1600px;
     }
   }
 
-  @-webkit-keyframes swell {
+  @keyframes swell {
     0%, 100% {
-        -webkit-transform: translate3d(0,-25px,0);
+      transform: translate3d(0,-25px,0);
     }
     50% {
-        -webkit-transform: translate3d(0,5px,0);
+      transform: translate3d(0,5px,0);
     }
 
   }
