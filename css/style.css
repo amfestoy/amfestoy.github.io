@@ -92,3 +92,22 @@ img {
   }
 
 }
+
+@-webkit-keyframes wave {
+    0% {
+      margin-left: 0;
+    }
+    100% {
+      margin-left: -1600px;
+    }
+  }
+
+  @-webkit-keyframes swell {
+    0%, 100% {
+        -webkit-transform: translate3d(0,-25px,0);
+    }
+    50% {
+        -webkit-transform: translate3d(0,5px,0);
+    }
+
+  }
